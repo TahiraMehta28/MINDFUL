@@ -1,0 +1,100 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SafeSphere Design System - Elegant Green Palette */
+
+@layer base {
+  :root {
+    --background: 59 42% 95%; /* Light beige (#d9d6a3 area) */
+    --foreground: 149 25% 25%; /* Dark green text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 149 25% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 149 25% 25%;
+
+    --primary: 149 25% 35%; /* Dark green (#537d5d) */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 128 18% 55%; /* Medium green (#688f66) */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 85 20% 70%; /* Soft green (#99b884) */
+    --muted-foreground: 149 25% 25%;
+
+    --accent: 85 29% 67%; /* Light sage (#b7cc9a) */
+    --accent-foreground: 149 25% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 85 29% 80%;
+    --input: 85 29% 85%;
+    --ring: 149 25% 35%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 149 25% 8%;
+    --foreground: 85 29% 90%;
+
+    --card: 149 25% 10%;
+    --card-foreground: 85 29% 90%;
+
+    --popover: 149 25% 10%;
+    --popover-foreground: 85 29% 90%;
+
+    --primary: 85 29% 67%;
+    --primary-foreground: 149 25% 8%;
+
+    --secondary: 128 18% 25%;
+    --secondary-foreground: 85 29% 90%;
+
+    --muted: 128 18% 20%;
+    --muted-foreground: 85 29% 70%;
+
+    --accent: 128 18% 25%;
+    --accent-foreground: 85 29% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 128 18% 20%;
+    --input: 128 18% 20%;
+    --ring: 85 29% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom SafeSphere styles */
+.gradient-sage {
+  background: linear-gradient(135deg, #b7cc9a 0%, #99b884 50%, #688f66 100%);
+}
+
+.shadow-sage {
+  box-shadow: 0 10px 25px -3px rgba(83, 125, 93, 0.1), 0 4px 6px -2px rgba(83, 125, 93, 0.05);
+}
+
+.emergency-pulse {
+  animation: pulse-emergency 2s ease-in-out infinite;
+}
+
+/* Map container styles */
+.map-container {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(83, 125, 93, 0.1), 0 10px 10px -5px rgba(83, 125, 93, 0.04);
+}
